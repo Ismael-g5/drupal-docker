@@ -297,6 +297,7 @@ $settings['hash_salt'] = 'ksoW2Um0UZPLCMMiQ_tug4991zpDqQfWmi7WIUhKnJGvmFwzB7aCtR
  * allow the container to be invalidated as soon as code is deployed.
  */
 # $settings['deployment_identifier'] = \Drupal::VERSION;
+$settings['container_yamls'][] = DRUPAL_ROOT . '/sites/default/development.services.yml';
 
 /**
  * Access control for update.php script.
@@ -895,7 +896,7 @@ $databases['default']['default'] = array (
   'username' => 'root',
   'password' => 'root',
   'prefix' => '',
-  'host' => '172.25.0.2',
+  'host' => 'db',
   'port' => '3306',
   'isolation_level' => 'READ COMMITTED',
   'driver' => 'mysql',
